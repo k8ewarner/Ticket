@@ -23,7 +23,7 @@ Ticket Submission
 </head>
 <body>
 <h1> 
-<font size = "6">Data Center Support Operations - Submit a Ticket</font>
+Data Center Support Operations - Submit a Ticket
 </h1>
 <p> Welcome to the ticket submission page. Please help us understand more about you and
 your issue so we know how best to help you. <br /><br />
