@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript">
+<!--
+function sayHello(){
+alert("Hello World")}
+//-->
+</script>
 <style>
 body	{background-color:#0033FF;}
 h1	{color:white;
@@ -56,7 +62,7 @@ Please briefly describe your issue here... </textarea></span><br /><br />
 	<span style="margin-left:2em"><input type="radio" name="Criticality" value="Moderate" checked> Moderate</span>   
 	<span style="margin-left:2em"><input type="radio" name="Criticality" value="Low"> Low</span><br /><br /><br />
 
-<input type="submit" value="Submit">
+<input type="button" onclick="sayHello()" value="Submit" />
 </div>
 </body>
 </html>
