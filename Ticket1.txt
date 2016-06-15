@@ -2,6 +2,7 @@
 <html>
 <head>
 <script language="javascript" type="text/javascript">
+<!--
 function validateEmail(){
 	var emailID = Ticket1.ticket.EmailAddress.value;
 	atpos = emailID.indexOf("@");
@@ -11,44 +12,11 @@ function validateEmail(){
 	else{
 		return true;}}
 function validate(){
-	if( Ticket1.ticket.CustomerIDNumber.value == "" ){
+	var x = document.forms["ticket"]["CustomerIDNumber"].value;
+	if( x == "" ){
 		alert("Please provide a Customer ID Number!");
-		Ticket1.ticket.CustomerIDNumber.focus();
 		return false;}
-	if( Ticket1.ticket.FirstName.value == "" ){
-		alert("Please provide your first name!");
-		Ticket1.ticket.FirstName.focus();
-		return false;}
-	if( Ticket1.ticket.LastName.value == "" ){
-		alert("Please provide your last name!");
-		Ticket1.ticket.LastName.focus();
-		return false;}
-	if( validateEmail() == "false"){
-		alert("Please provide your email address in the format 'name@wxy.com'!");
-		Ticket1.ticket.EmailAddress.focus();
-		return false;}
-	if( Ticket1.ticket.DayPhoneNumber.value == "" ) || isNaN(Ticket1.ticket.DayPhoneNumber.value){
-		alert("Please provide your phone number in the format XXX XXX XXXX!");
-		Ticket1.ticket.DayPhoneNumber.focus();
-		return false;}
-	if( Ticket1.ticket.NightPhoneNumber.value == "" ) || isNaN(Ticket1.ticket.NightPhoneNumber.value){
-		alert("Please provide your phone number in the format XXX XXX XXXX!");
-		Ticket1.ticket.NightPhoneNumber.focus();
-		return false;}
-	if( Ticket1.ticket.DateIssueStarted.value == "" ){
-		alert("Please provide the day on which your issue started!");
-		Ticket1.ticket.DateIssueStarted.focus();
-		return false;}
-	if( Ticket1.ticket.Description.value == "Please briefly describe your issue here..." ){
-		alert("Please provide at least one word describing your issue!");
-		Ticket1.ticket.Description.focus();
-		return false;}
-	if( Ticket1.ticket.AffectedAreas.value == "" ){
-		alert("Please provide the IP Address or Domain Name affected by this issue");
-		Ticket1.ticket.AffectedAreas.focus();
-		return false;}
-	return(true);}
-
+//-->
 </script>
 <style>
 body	{background-color:#0033FF;}
@@ -81,7 +49,7 @@ This is a buffer
 </div>
 <div id="section">
 <h3 style="text-align:center;"> Use this form to submit your ticket. Please complete all fields. </h3>
-<form style="text-align:center;" name="ticket" onsubmit="return(validate());">
+<form style="text-align:center;" name="ticket" onsubmit="return validate()">
 	Customer ID number:<span style="margin-left:13.3em"><input type="text" name="CustomerIDNumber"></span><br /><br />
 <!-- (#s & special characters) -->
 	First Name:<span style="margin-left:17.4em"><input type="text" name="FirstName"></span><br /><br />
