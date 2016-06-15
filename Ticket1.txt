@@ -10,31 +10,21 @@
 function validate(){ 
 	var c = document.forms["ticket"]["CustomerIDNumber"].value;
 	var fn = document.forms["ticket"]["FirstName"].value;
-
 	var ln = document.forms["ticket"]["LastName"].value;
-
 	var dpn = document.forms["ticket"]["DayPhoneNumber"].value;
-
 	var npn = document.forms["ticket"]["NightPhoneNumber"].value;
-
 	var dis = document.forms["ticket"]["DateIssueStarted"].value;
-
 	var d = document.forms["ticket"]["Description"].value;
-
 	var a = document.forms["ticket"]["AffectedAreas"].value;
-
 
 	if( c == "" ){
 		alert("Please provide a Customer ID Number!");
 		return false;}
 	else if( fn == "" ){
 		alert("Please provide your first name!");
-
 		return false;}
 	else if( ln == "" ){
-
 		alert("Please provide your last name!");
-
 		return false;}
 	else if( isNaN(dpn) || dpn == "") {
 		alert("Please provide your phone number in the format XXXXXXXXXX!");
@@ -43,19 +33,13 @@ function validate(){
 		alert("Please provide your phone number in the format XXXXXXXXXX!");
 		return false;}
 	else if( dis == "" ){
-
 		alert("Please provide the day on which your issue started!");
-
 		return false;}
 	else if( d == "Please briefly describe your issue here..." || d == ""){
-
 		alert("Please provide at least one word describing your issue!");
-
 		return false;}
 	else if( a == "" ){
-
 		alert("Please provide the IP Address or Domain Name affected by the issue");
-
 		return false;}}
 //-->
 </script>
@@ -92,28 +76,18 @@ This is a buffer
 <h3 style="text-align:center;"> Use this form to submit your ticket. Please complete all fields. </h3>
 <form style="text-align:center;" name="ticket" onsubmit="return validate()" method="post">
 	Customer ID number:<span style="margin-left:13.3em"><input type="text" name="CustomerIDNumber"></span><br /><br />
-
 	First Name:<span style="margin-left:17.4em"><input type="text" name="FirstName"></span><br /><br />
-
 	Last Name:<span style="margin-left:17.5em"><input type="text" name="LastName"></span><br /><br />
-
 	Email Address:<span style="margin-left:10em"><textarea rows="1" cols="30" name="EmailAddress">(e.g. name@xyz.com)</textarea></span><br /><br />
-
 	Contact Phone Number (Day):<span style="margin-left:10em"><input type="text" name="DayPhoneNumber"></span><br /><br />
-
 	Contact Phone Number (After Business Hours):<span style="margin-left:3em"><input type="text" name="NightPhoneNumber"></span><br /><br />
-
 	Date Issue Started:<span style="margin-left:14.75em"><input type="text" name="DateIssueStarted"></span><br /><br />
-
 	Brief Description of the Issue:<span style="margin-left:2em"><textarea rows="5" cols="50" name="Description">
-Please briefly describe your issue here... </textarea></span><br /><br />
-
+		Please briefly describe your issue here... </textarea></span><br /><br />
 	IP Address or Domain Name Impacted:<span style="margin-left:7em"><input type="text" name="AffectedAreas"></span><br /><br />
-
 	Criticality of Issue:<span style="margin-left:5em"><input type="radio" name="Criticality" value="High"> High </span>  
 	<span style="margin-left:2em"><input type="radio" name="Criticality" value="Moderate" checked> Moderate</span>   
 	<span style="margin-left:2em"><input type="radio" name="Criticality" value="Low"> Low</span><br /><br /><br />
-
 <input type="submit" value="Submit" /> <!-- when submit button is selected, validation form function is run -->
 </form>
 </div>
